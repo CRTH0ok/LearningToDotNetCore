@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstProgram", "FirstProgram.csproj", "{F3511EA4-6A70-4581-8B70-E97FA0A5FB4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstProgram", "FirstProgram\FirstProgram.csproj", "{F3511EA4-6A70-4581-8B70-E97FA0A5FB4D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F3511EA4-6A70-4581-8B70-E97FA0A5FB4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3511EA4-6A70-4581-8B70-E97FA0A5FB4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3511EA4-6A70-4581-8B70-E97FA0A5FB4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

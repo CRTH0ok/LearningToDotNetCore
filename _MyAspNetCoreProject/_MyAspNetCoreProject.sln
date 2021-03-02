@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstProgram", "FirstProgra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageFeatures", "LanguageFeatures\LanguageFeatures.csproj", "{4A9696D6-A061-457B-A3BE-592DF09A6D8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

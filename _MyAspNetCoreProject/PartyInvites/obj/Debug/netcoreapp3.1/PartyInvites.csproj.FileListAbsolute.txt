@@ -38,3 +38,4 @@ F:\Araby\.NET\LearningToDotNetCore\_MyAspNetCoreProject\PartyInvites\obj\Debug\n
 F:\Araby\.NET\LearningToDotNetCore\_MyAspNetCoreProject\PartyInvites\obj\Debug\netcoreapp3.1\Razor\Views\Home\RsvpForm.cshtml.g.cs
 F:\Araby\.NET\LearningToDotNetCore\_MyAspNetCoreProject\PartyInvites\obj\Debug\netcoreapp3.1\Razor\Views\Home\Thanks.cshtml.g.cs
 F:\Araby\.NET\LearningToDotNetCore\_MyAspNetCoreProject\PartyInvites\obj\Debug\netcoreapp3.1\Razor\Views\Home\ListResponse.cshtml.g.cs
+F:\Araby\.NET\LearningToDotNetCore\_MyAspNetCoreProject\PartyInvites\bin\Debug\netcoreapp3.1\libman.json

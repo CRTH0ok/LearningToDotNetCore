@@ -59,22 +59,107 @@ namespace LanguageFeatures.Controllers
             //So,Use IEnumerable could process both single product and product array
             Console.WriteLine("ExtensionMethod");
             //Single
-            ShoppingCart shoppingCart = new ShoppingCart { Products = Product.GetProducts() };
+            ShoppingCart shoppingCart = new ShoppingCart
+            {
+                Products = Product.GetProducts()
+            };
             Decimal cartTotalVal = shoppingCart.TotalPrices();
             Console.WriteLine(cartTotalVal);
             //Applying Extension Methods to an Interface
             Console.WriteLine("ExtensionMethodUseInterface");
             //Array
             Product[] productArray = {
-                new Product {Name = "Kayak", Price = 275M},
-                new Product {Name = "Lifejacket", Price = 48.95M}
+                new Product
+                {
+                    Name = "Kayak",
+                    Price = 275M
+                },
+                new Product
+                {
+                    Name = "Lifejacket",
+                    Price = 48.95M
+                },
+                new Product
+                {
+                    Name = "Soccer Ball",
+                    Price = 19.5M
+                },
+                new Product
+                {
+                    Name= "Corner Flag",
+                    Price = 22.5M
+                }
             };
             decimal cartTotal = shoppingCart.TotalPrices();
             decimal arrayTotal = productArray.TotalPrices();
             Console.WriteLine(cartTotal + ' ' + arrayTotal);
 
+            //Use FilterExtension
+            Decimal filterByPriceArrayTotal = productArray.FilterByPrice(20).TotalPrices();
+            Decimal filterByNameArrayTotal = productArray.FilterByName('L').TotalPrices();
+            Console.WriteLine($"FilterByPriceArrayTotal = {filterByPriceArrayTotal:C2}");
+            Console.WriteLine($"FilterByNameArrayTotal = {filterByNameArrayTotal:C2}");
+
+            //Use Function FilterExtension
+            bool filterByPrice(Product product)
+            {
+                return product?.Price > 20;
+            }
+            Func<Product, bool> filterByName = delegate (Product product)
+             {
+                 return product?.Name[0] == 'L';
+             };
+            Decimal funcFilterByPriceArrayTotal = productArray.Filter(filterByPrice).TotalPrices();
+            Decimal funcFilterByNameArrayTotal = productArray.Filter(filterByName).TotalPrices();
+            Console.WriteLine($"FuncFilterByPriceArrayTotal = {funcFilterByPriceArrayTotal:C2}");
+            Console.WriteLine($"FuncFilterByNameArrayTotal = {funcFilterByNameArrayTotal:C2}");
+
+            //Use LambdaExpress
+            Decimal lambdaFilterByPriceArrayTotal = productArray.Filter(e => e?.Price > 20).TotalPrices();
+            Decimal lambdaFilterByNameArratTotal = productArray.Filter(e => e?.Name[0] == 'L').TotalPrices();
+
+            //AnonymousType
+            var anonynousProducts = new[] {
+                new { Name = "Kayak", Price = 275M },
+                new { Name = "Lifejacket", Price = 48.95M },
+                new { Name = "Soccer ball", Price = 19.50M },
+                new { Name = "Corner flag", Price = 34.95M }
+            };
+            Console.WriteLine($"AnonymousProducts'Name = '{anonynousProducts.Select(e => e.Name)}'");
+
+
+            //UseDefaultImplementInterface
+            IProductSelection productSelection = new ShoppingCartDefaultImplement
+            (
+                new Product { Name = "Kayak", Price = 275M },
+                new Product { Name = "Lifejacket", Price = 48.95M },
+                new Product { Name = "Soccer ball", Price = 19.50M },
+                new Product { Name = "Corner flag", Price = 34.95M }
+            );
+            Console.WriteLine($"Use Default ImplementInterface Require Names:{productSelection}");
+
 
             return View(results);
+        }
+
+        public async Task<ViewResult> Asynchronous()
+        {
+            //Asynchronous methods
+            long? traditionalLength = await MyAsyncMethods.TraditionalGetPageLength();
+            long? simplyLength = await MyAsyncMethods.SimplifyGetPageLength();
+            Console.WriteLine($"traditionalLength:{traditionalLength}, simplyLength:{simplyLength}");
+
+            //Asynchronous Enumerable
+            List<String> output = new List<string>();
+            await foreach (long? length in MyAsyncMethods.GetPageLength(output, "apress.com", "microsoft.com", "amazon.com"))
+            {
+                output.Add($"Page length : {length}");
+            }
+            foreach (string item in output)
+            {
+                Console.WriteLine(item);
+            }
+            return View(new string[] { $"traditionalLength:{traditionalLength}, simplyLength:{simplyLength}" });
         }
     }
 }

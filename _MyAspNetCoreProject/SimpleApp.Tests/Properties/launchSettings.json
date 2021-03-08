@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "SimpleApp.Tests": {
+      "commandName": "Project"
+    }
+  }
+}

@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstProgram", "FirstProgra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PartyInvites", "PartyInvites\PartyInvites.csproj", "{2C09F5DF-F73D-41E4-B91D-9DC4C1897968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageFeatures", "LanguageFeatures\LanguageFeatures.csproj", "{4A9696D6-A061-457B-A3BE-592DF09A6D8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LanguageFeatures", "LanguageFeatures\LanguageFeatures.csproj", "{4A9696D6-A061-457B-A3BE-592DF09A6D8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleApp", "SimpleApp\SimpleApp.csproj", "{EC484432-CA6A-4E45-9DFD-A15C89260CBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleApp.Tests", "SimpleApp.Tests\SimpleApp.Tests.csproj", "{ADB06EF8-9CFD-4FCC-BF76-034C4389B62B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A9696D6-A061-457B-A3BE-592DF09A6D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC484432-CA6A-4E45-9DFD-A15C89260CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC484432-CA6A-4E45-9DFD-A15C89260CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC484432-CA6A-4E45-9DFD-A15C89260CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC484432-CA6A-4E45-9DFD-A15C89260CBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB06EF8-9CFD-4FCC-BF76-034C4389B62B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB06EF8-9CFD-4FCC-BF76-034C4389B62B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB06EF8-9CFD-4FCC-BF76-034C4389B62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB06EF8-9CFD-4FCC-BF76-034C4389B62B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
